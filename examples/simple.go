@@ -7,8 +7,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/centrifuge/precise-proofs/examples/documents"
-	"github.com/centrifuge/precise-proofs/proofs"
+	"github.com/alexeyneu/precise-proofs/examples/documents"
+	"github.com/alexeyneu/precise-proofs/proofs"
 )
 
 func printError(err error) {

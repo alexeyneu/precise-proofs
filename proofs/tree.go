@@ -151,23 +151,23 @@ Library supports adding a prefix to the document path by setting up TreeOption.P
 package proofs
 
 import (
-	"bytes"
-	"crypto/rand"
-	"encoding/hex"
-	"errors"
-	"fmt"
-	"hash"
-	"reflect"
-	"sort"
-	"strconv"
-	"strings"
+"bytes"
+"crypto/rand"
+"encoding/hex"
+"errors"
+"fmt"
+"hash"
+"reflect"
+"sort"
+"strconv"
+"strings"
 
-	"github.com/centrifuge/precise-proofs/proofs/proto"
-	"github.com/golang/protobuf/descriptor"
-	"github.com/golang/protobuf/proto"
-	"github.com/golang/protobuf/ptypes"
-	"github.com/golang/protobuf/ptypes/timestamp"
-	"github.com/xsleonard/go-merkle"
+"github.com/alexeyneu/precise-proofs/proofs/proto"
+"github.com/golang/protobuf/descriptor"
+"github.com/golang/protobuf/proto"
+"github.com/golang/protobuf/ptypes"
+"github.com/golang/protobuf/ptypes/timestamp"
+"github.com/xsleonard/go-merkle"
 )
 
 // DefaultSaltsLengthSuffix is the suffix used to store the length of slices (repeated) fields in the tree. It can be
@@ -300,7 +300,7 @@ func (doctree *DocumentTree) Generate() error {
 
 	hashes := make([][]byte, len(doctree.leaves))
 	for i, leaf := range doctree.leaves {
-		if (!leaf.Hashed) || (len(leaf.Hash) == 0) {
+		if !(leaf.Hashed && len(leaf.Hash) != 0) {
 			leaf.HashNode(doctree.hash, doctree.compactProperties)
 		}
 		hashes[i] = leaf.Hash
@@ -581,6 +581,12 @@ func (f *messageFlattener) generateLeaves(parentProp *Property, fcurrent *messag
 		reflectValueFieldType := fcurrent.messageType.Field(i)
 
 		// Pointer dereference for correct type checks
+		
+		if reflectValueFieldType.Tag.Get("protobuf_oneof") != "" && !valueField.IsNil(){
+			z := valueField.Elem().Elem().Field(0)
+			valueType = reflect.TypeOf(z.Interface())
+		}
+
 		if valueType.Kind() == reflect.Ptr {
 			valueType = valueType.Elem()
 		}
@@ -590,24 +596,43 @@ func (f *messageFlattener) generateLeaves(parentProp *Property, fcurrent *messag
 			continue
 		}
 
-		name, num, err1 := ExtractFieldTags(reflectValueFieldType.Tag.Get("protobuf"))
-		if err1 != nil {
-			return err1
-		}
-
 		var prop Property
-		if parentProp == nil {
-			prop = NewProperty(name, num)
-		} else {
-			prop = parentProp.FieldProp(name, num)
-		}
+		var name string
+		var num FieldNum
+		var err1 error
+		if reflectValueFieldType.Tag.Get("protobuf_oneof") != "" && !valueField.IsNil(){
+			name, num, err1 = ExtractFieldTags(valueField.Elem().Elem().Type().Field(0).Tag.Get("protobuf"))
+			if err1 != nil {
+				return err1
+			}
+			if parentProp == nil {
+				prop = NewProperty(name, num)
+			} else {
+				prop = parentProp.FieldProp(name, num)
+			}
+		}else {
 
+			name, num, err1 = ExtractFieldTags(reflectValueFieldType.Tag.Get("protobuf"))
+			if err1 != nil {
+				return err1
+			}
+
+
+			if parentProp == nil {
+				prop = NewProperty(name, num)
+			} else {
+				prop = parentProp.FieldProp(name, num)
+			}
+		}
 		// Check if the field has an exclude_from_tree option and skip it
 		if _, ok := fcurrent.excludedFields[prop.Text]; ok {
 			continue
 		}
-
+		
 		value := valueField.Interface()
+		if reflectValueFieldType.Tag.Get("protobuf_oneof") != "" && !valueField.IsNil(){
+			value = valueField.Elem().Elem().Field(0).Interface()
+		}			
 		value = dereferencePointer(value)
 
 		if _, ok := fcurrent.hashedFields[prop.Text]; ok {
@@ -636,7 +661,11 @@ func (f *messageFlattener) generateLeaves(parentProp *Property, fcurrent *messag
 				err = f.handleSlice(prop, fcurrent, i, sliceValue, salts)
 			}
 		} else if valueType.Kind() == reflect.Struct {
-			err = f.handleStruct(prop, valueField, valueType, reflectSaltsValue.Interface())
+			if reflectValueFieldType.Tag.Get("protobuf_oneof") != "" && !valueField.IsNil(){
+				err = f.handleStruct(prop,valueField.Elem().Elem().Field(0) , valueType, reflectSaltsValue.Interface())
+			}else {
+				err = f.handleStruct(prop, valueField, valueType, reflectSaltsValue.Interface())
+			}
 		} else {
 			salt := reflect.Indirect(fcurrent.saltsValue).FieldByName(reflectValueFieldType.Name).Interface().([]byte)
 			err = f.handleAppendLeaf(prop, value, salt)

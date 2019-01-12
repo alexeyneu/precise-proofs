@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/centrifuge/precise-proofs/examples/documents"
+	"github.com/alexeyneu/precise-proofs/examples/documents"
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golang/protobuf/ptypes/timestamp"
 	"github.com/stretchr/testify/assert"

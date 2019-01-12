@@ -6,7 +6,7 @@ package documentspb
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import _ "github.com/centrifuge/precise-proofs/proofs/proto"
+import _ "github.com/alexeyneu/precise-proofs/proofs/proto"
 import timestamp "github.com/golang/protobuf/ptypes/timestamp"
 
 // Reference imports to suppress errors if they are not otherwise used.

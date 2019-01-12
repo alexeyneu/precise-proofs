@@ -9,7 +9,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/centrifuge/precise-proofs/proofs/proto"
+	"github.com/alexeyneu/precise-proofs/proofs/proto"
 )
 
 // Property uniquely identifies a LeafNode
