@@ -576,7 +576,7 @@ func (f *messageFlattener) generateLeaves(parentProp *Property, fcurrent *messag
 	}
 
 	for i := 0; i < fcurrent.messageValue.NumField(); i++ {
-		valueField := fcurrent.messageValue.Field(i)|
+		valueField := fcurrent.messageValue.Field(i)
 		valueType := reflect.TypeOf(valueField.Interface())
 		reflectValueFieldType := fcurrent.messageType.Field(i)
 
@@ -644,8 +644,10 @@ func (f *messageFlattener) generateLeaves(parentProp *Property, fcurrent *messag
 			f.handleAppendHashedLeaf(prop, value.([]byte))
 			continue
 		}
-
 		reflectSaltsValue := fcurrent.saltsValue.FieldByName(reflectValueFieldType.Name)
+		if reflectValueFieldType.Tag.Get("protobuf_oneof") != "" && !valueField.IsNil(){
+			reflectSaltsValue = fcurrent.saltsValue.FieldByName(valueField.Elem().Elem().Type().Field(0).Name)
+		}
 		salts := reflectSaltsValue.Interface()
 
 		salts = dereferencePointer(salts)
@@ -667,10 +669,9 @@ func (f *messageFlattener) generateLeaves(parentProp *Property, fcurrent *messag
 				err = f.handleStruct(prop, valueField, valueType, reflectSaltsValue.Interface())
 			}
 		} else {
-		if reflectValueFieldType.Tag.Get("protobuf_oneof") != "" && !valueField.IsNil(){
-				salt := reflect.Indirect(fcurrent.saltsValue).FieldByName(valueField.Elem().Elem().Type().Field(0).Name).Interface().([]byte)
-			}else {
-				salt := reflect.Indirect(fcurrent.saltsValue).FieldByName(reflectValueFieldType.Name).Interface().([]byte)
+			salt := reflect.Indirect(fcurrent.saltsValue).FieldByName(reflectValueFieldType.Name).Interface().([]byte)
+			if reflectValueFieldType.Tag.Get("protobuf_oneof") != "" && !valueField.IsNil(){
+				salt = reflect.Indirect(fcurrent.saltsValue).FieldByName(valueField.Elem().Elem().Type().Field(0).Name).Interface().([]byte)
 			}
 			err = f.handleAppendLeaf(prop, value, salt)
 		}
