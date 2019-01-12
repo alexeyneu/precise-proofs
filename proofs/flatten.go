@@ -55,8 +55,12 @@ func (f *messageFlattener) handleValue(prop Property, value reflect.Value, saltV
 
 		// Handle each field of the struct
 		for i := 0; i < value.NumField(); i++ {
+			var oneof_here bool
 			field := value.Type().Field(i)
-
+			if field.Tag.Get("protobuf_oneof") != "" && !value.Field(i).IsNil(){
+				field = value.Field(i).Elem().Elem().Type().Field(0)
+				oneof_here = !false
+			}
 			// Ignore fields starting with XXX_, those are protobuf internals
 			if strings.HasPrefix(field.Name, "XXX_") {
 				continue
@@ -83,12 +87,15 @@ func (f *messageFlattener) handleValue(prop Property, value reflect.Value, saltV
 			}
 
 			fieldProp := prop.FieldProp(name, num)
-
 			isHashed, err := proto.GetExtension(innerFieldDescriptor.Options, proofspb.E_HashedField)
 			if err == nil && *(isHashed.(*bool)) {
 				// Fields that have the hashed_field tag on the protobuf message will be treated as hashes without prepending
 				// the property & salt.
+				
 				hash, ok := value.Field(i).Interface().([]byte)
+				if oneof_here {
+					hash, ok = value.Field(i).Elem().Elem().Field(0).Interface().([]byte)
+				}
 				if !ok {
 					return errors.New("The option hashed_field is only supported for type `bytes`")
 				}
@@ -96,10 +103,15 @@ func (f *messageFlattener) handleValue(prop Property, value reflect.Value, saltV
 				f.appendLeaf(fieldProp, "", nil, hash, true)
 				continue
 			}
-
-			fieldSaltValue := saltValue.FieldByName(field.Name)
-			fieldLengthSaltValue := saltValue.FieldByName(field.Name + f.saltsLengthSuffix)
-			err = f.handleValue(fieldProp, value.Field(i), fieldSaltValue, fieldLengthSaltValue, innerFieldDescriptor)
+			if oneof_here {
+				fieldSaltValue := saltValue.FieldByName(value.Type().Field(i).Name)
+				fieldLengthSaltValue := saltValue.FieldByName(value.Type().Field(i).Name + f.saltsLengthSuffix)
+				err = f.handleValue(fieldProp, value.Field(i).Elem().Elem().Field(0), fieldSaltValue, fieldLengthSaltValue, innerFieldDescriptor)
+			} else {
+				fieldSaltValue := saltValue.FieldByName(field.Name)
+				fieldLengthSaltValue := saltValue.FieldByName(field.Name + f.saltsLengthSuffix)
+				err = f.handleValue(fieldProp, value.Field(i), fieldSaltValue, fieldLengthSaltValue, innerFieldDescriptor)
+			}
 			if err != nil {
 				return errors.Wrapf(err, "error handling field %s", field.Name)
 			}
