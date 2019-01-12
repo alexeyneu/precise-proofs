@@ -7,8 +7,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/centrifuge/precise-proofs/examples/documents"
-	"github.com/centrifuge/precise-proofs/proofs"
+	"gopkg.in/alexeyneu/precise-proofs.v2/examples/documents"
+	"gopkg.in/alexeyneu/precise-proofs.v2/proofs"
 )
 
 func main() {

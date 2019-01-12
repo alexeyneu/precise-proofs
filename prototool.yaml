@@ -5,7 +5,7 @@ lint:
   - id: MESSAGE_FIELD_NAMES_LOWER_SNAKE_CASE 
 generate:
   go_options:
-    import_path: github.com/centrifuge/precise-proofs
+    import_path: gopkg.in/alexeyneu/precise-proofs.v2
   plugins:
   - name: go
     type: go

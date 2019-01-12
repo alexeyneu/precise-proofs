@@ -184,7 +184,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/centrifuge/precise-proofs/proofs/proto"
+	"gopkg.in/alexeyneu/precise-proofs.v2/proofs/proto"
 	"github.com/golang/protobuf/proto"
 	"github.com/xsleonard/go-merkle"
 )

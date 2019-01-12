@@ -12,7 +12,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/centrifuge/precise-proofs/proofs/proto"
+	"gopkg.in/alexeyneu/precise-proofs.v2/proofs/proto"
 )
 
 // Property uniquely identifies a LeafNode
