@@ -7,7 +7,7 @@ import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
 import timestamp "github.com/golang/protobuf/ptypes/timestamp"
-import _ "gopkg.in/alexeyneu/precise-proofs.v2/proofs/proto"
+import _ "gopkg.in/alexeyneu/precise-proofs.v1/proofs/proto"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal

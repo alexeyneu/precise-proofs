@@ -8,7 +8,7 @@ import (
 "strconv"
 "strings"
 
-"gopkg.in/alexeyneu/precise-proofs.v2/proofs/proto"
+"gopkg.in/alexeyneu/precise-proofs.v1/proofs/proto"
 "github.com/golang/protobuf/descriptor"
 "github.com/golang/protobuf/proto"
 go_descriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"

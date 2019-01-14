@@ -1,5 +1,5 @@
 language: go
-go_import_path: gopkg.in/alexeyneu/precise-proofs.v2
+go_import_path: gopkg.in/alexeyneu/precise-proofs.v1
 go:
  - 1.10.x
  - tip

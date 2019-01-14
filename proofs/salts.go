@@ -11,7 +11,7 @@ import (
 	go_descriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
 	"github.com/golang/protobuf/protoc-gen-go/generator"
 
-	"gopkg.in/alexeyneu/precise-proofs.v2/proofs/proto"
+	"gopkg.in/alexeyneu/precise-proofs.v1/proofs/proto"
 )
 
 // FillSalts is a helper message that iterates over all fields in a proto.Message struct and fills them with 32 byte

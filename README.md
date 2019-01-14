@@ -1,6 +1,6 @@
 Precise Proofs
 ==============
-[![GoDoc](https://godoc.org/gopkg.in/alexeyneu/precise-proofs.v2/proofs?status.svg)](https://godoc.org/gopkg.in/alexeyneu/precise-proofs.v2/proofs)
+[![GoDoc](https://godoc.org/gopkg.in/alexeyneu/precise-proofs.v1/proofs?status.svg)](https://godoc.org/gopkg.in/alexeyneu/precise-proofs.v1/proofs)
 [![Travis CI](https://api.travis-ci.org/centrifuge/precise-proofs.svg?branch=master)](https://travis-ci.org/centrifuge/precise-proofs)
 [![codecov](https://codecov.io/gh/centrifuge/precise-proofs/branch/master/graph/badge.svg)](https://codecov.io/gh/centrifuge/precise-proofs)
 

@@ -3,7 +3,7 @@ package proofs
 import (
 	"testing"
 
-	"gopkg.in/alexeyneu/precise-proofs.v2/examples/documents"
+	"gopkg.in/alexeyneu/precise-proofs.v1/examples/documents"
 	"github.com/stretchr/testify/assert"
 )
 
