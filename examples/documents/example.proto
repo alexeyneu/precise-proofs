@@ -230,6 +230,20 @@ message InvalidHashedFieldDocument {
   ];
 }
 
+message  oneofSample{
+  int32 valueA = 1;
+  oneof oneofBlock
+  {
+    int32 valueB = 2;
+    string valueC = 3;
+  }
+}
+
+message oneofSampleSalts {
+  bytes valueA = 1;
+  bytes oneofBlock = 2;
+}
+
 message LongDocument {
   int64 value0 = 16;
   int64 value1 = 1;

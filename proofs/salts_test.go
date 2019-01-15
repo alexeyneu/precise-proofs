@@ -1,10 +1,10 @@
 package proofs
 
 import (
-	"testing"
+"testing"
 
-	"gopkg.in/alexeyneu/precise-proofs.v1/examples/documents"
-	"github.com/stretchr/testify/assert"
+"gopkg.in/alexeyneu/precise-proofs.v1/examples/documents"
+"github.com/stretchr/testify/assert"
 )
 
 func TestFillSalts(t *testing.T) {
@@ -25,6 +25,14 @@ func TestFillSalts(t *testing.T) {
 
 	assert.Equal(t, len(exampleFRDoc.ValueC), len(exampleFRSalts.ValueC))
 	assert.NotNil(t, exampleFRSalts.ValueC[0])
+
+//Document with oneof fieldset
+	exampleOneofDoc := &documentspb.ExampleOneofSampleDocument
+	exampleOneofSalts := &documentspb.ExampleOneofSampleSaltsDocument
+	err = FillSalts(exampleOneofDoc, exampleOneofSalts)
+	assert.Nil(t, err, "Fill salts should not fail")
+	assert.NotNil(t, exampleOneofSalts.ValueA)
+	assert.NotNil(t, exampleOneofSalts.OneofBlock)
 
 	// Document with mapping
 	exampleMapDoc := &documentspb.ExampleSimpleMapDocument

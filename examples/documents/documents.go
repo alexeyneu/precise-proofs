@@ -110,3 +110,13 @@ var ExampleSaltedSimpleMapDocument = SaltedSimpleMapDocument{
 	},
 	ValueDLength: salt,
 }
+var ExampleOneofSampleDocument = OneofSample{
+	ValueA: 2,
+	OneofBlock: &OneofSample_ValueB{int32(1)} ,
+}
+
+var ExampleOneofSampleSaltsDocument = OneofSample{
+	ValueA: salt,
+	OneofBlock: salt,
+}
+
