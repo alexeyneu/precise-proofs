@@ -230,6 +230,8 @@ message InvalidHashedFieldDocument {
   ];
 }
 
+//to use proof routines on loaded oneof field set use name of field , not a name of field set
+// CreateProof("valueB")  etc
 message  oneofSample{
   int32 valueA = 1;
   oneof oneofBlock
