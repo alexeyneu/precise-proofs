@@ -115,7 +115,7 @@ var ExampleOneofSampleDocument = OneofSample{
 	OneofBlock: &OneofSample_ValueB{int32(1)} ,
 }
 
-var ExampleOneofSampleSaltsDocument = OneofSample{
+var ExampleOneofSampleSaltsDocument = OneofSampleSalts{
 	ValueA: salt,
 	OneofBlock: salt,
 }
