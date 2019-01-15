@@ -8,7 +8,7 @@ option java_outer_classname = "ExampleProto";
 option java_package = "com.documents";
 
 import "google/protobuf/timestamp.proto";
-import "proofs/proto/proof.proto";
+import "gopkg.in/alexeyneu/precise-proofs.v1/proofs/proto/proof.proto";
 
 message ExampleDocument {
   string valueA = 1;

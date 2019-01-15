@@ -1,6 +1,6 @@
 package documentspb
 
-//go:generate protoc -I $PROTOBUF/src/ -I. -I $GOPATH/src --go_out=$GOPATH/src/ example.proto
+//go:generate  protoc -I$GOPATH/src  -I. --go_out=. example.proto
 
 import (
 	"time"
