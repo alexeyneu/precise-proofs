@@ -40,7 +40,7 @@ func (x Enum) String() string {
 	return proto.EnumName(Enum_name, int32(x))
 }
 func (Enum) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{0}
+	return fileDescriptor_example_91be35c491169215, []int{0}
 }
 
 type ExampleDocument struct {
@@ -63,7 +63,7 @@ func (m *ExampleDocument) Reset()         { *m = ExampleDocument{} }
 func (m *ExampleDocument) String() string { return proto.CompactTextString(m) }
 func (*ExampleDocument) ProtoMessage()    {}
 func (*ExampleDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{0}
+	return fileDescriptor_example_91be35c491169215, []int{0}
 }
 func (m *ExampleDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ExampleDocument.Unmarshal(m, b)
@@ -165,7 +165,7 @@ func (m *AllFieldTypes) Reset()         { *m = AllFieldTypes{} }
 func (m *AllFieldTypes) String() string { return proto.CompactTextString(m) }
 func (*AllFieldTypes) ProtoMessage()    {}
 func (*AllFieldTypes) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{1}
+	return fileDescriptor_example_91be35c491169215, []int{1}
 }
 func (m *AllFieldTypes) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AllFieldTypes.Unmarshal(m, b)
@@ -211,7 +211,7 @@ func (m *AllFieldTypesSalts) Reset()         { *m = AllFieldTypesSalts{} }
 func (m *AllFieldTypesSalts) String() string { return proto.CompactTextString(m) }
 func (*AllFieldTypesSalts) ProtoMessage()    {}
 func (*AllFieldTypesSalts) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{2}
+	return fileDescriptor_example_91be35c491169215, []int{2}
 }
 func (m *AllFieldTypesSalts) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AllFieldTypesSalts.Unmarshal(m, b)
@@ -256,7 +256,7 @@ func (m *SimpleItem) Reset()         { *m = SimpleItem{} }
 func (m *SimpleItem) String() string { return proto.CompactTextString(m) }
 func (*SimpleItem) ProtoMessage()    {}
 func (*SimpleItem) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{3}
+	return fileDescriptor_example_91be35c491169215, []int{3}
 }
 func (m *SimpleItem) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SimpleItem.Unmarshal(m, b)
@@ -294,7 +294,7 @@ func (m *SaltedSimpleItem) Reset()         { *m = SaltedSimpleItem{} }
 func (m *SaltedSimpleItem) String() string { return proto.CompactTextString(m) }
 func (*SaltedSimpleItem) ProtoMessage()    {}
 func (*SaltedSimpleItem) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{4}
+	return fileDescriptor_example_91be35c491169215, []int{4}
 }
 func (m *SaltedSimpleItem) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedSimpleItem.Unmarshal(m, b)
@@ -333,7 +333,7 @@ func (m *RepeatedItem) Reset()         { *m = RepeatedItem{} }
 func (m *RepeatedItem) String() string { return proto.CompactTextString(m) }
 func (*RepeatedItem) ProtoMessage()    {}
 func (*RepeatedItem) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{5}
+	return fileDescriptor_example_91be35c491169215, []int{5}
 }
 func (m *RepeatedItem) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RepeatedItem.Unmarshal(m, b)
@@ -380,7 +380,7 @@ func (m *SaltedRepeatedItem) Reset()         { *m = SaltedRepeatedItem{} }
 func (m *SaltedRepeatedItem) String() string { return proto.CompactTextString(m) }
 func (*SaltedRepeatedItem) ProtoMessage()    {}
 func (*SaltedRepeatedItem) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{6}
+	return fileDescriptor_example_91be35c491169215, []int{6}
 }
 func (m *SaltedRepeatedItem) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedRepeatedItem.Unmarshal(m, b)
@@ -432,7 +432,7 @@ func (m *SimpleMap) Reset()         { *m = SimpleMap{} }
 func (m *SimpleMap) String() string { return proto.CompactTextString(m) }
 func (*SimpleMap) ProtoMessage()    {}
 func (*SimpleMap) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{7}
+	return fileDescriptor_example_91be35c491169215, []int{7}
 }
 func (m *SimpleMap) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SimpleMap.Unmarshal(m, b)
@@ -471,7 +471,7 @@ func (m *SaltedSimpleMap) Reset()         { *m = SaltedSimpleMap{} }
 func (m *SaltedSimpleMap) String() string { return proto.CompactTextString(m) }
 func (*SaltedSimpleMap) ProtoMessage()    {}
 func (*SaltedSimpleMap) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{8}
+	return fileDescriptor_example_91be35c491169215, []int{8}
 }
 func (m *SaltedSimpleMap) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedSimpleMap.Unmarshal(m, b)
@@ -516,7 +516,7 @@ func (m *SimpleStringMap) Reset()         { *m = SimpleStringMap{} }
 func (m *SimpleStringMap) String() string { return proto.CompactTextString(m) }
 func (*SimpleStringMap) ProtoMessage()    {}
 func (*SimpleStringMap) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{9}
+	return fileDescriptor_example_91be35c491169215, []int{9}
 }
 func (m *SimpleStringMap) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SimpleStringMap.Unmarshal(m, b)
@@ -555,7 +555,7 @@ func (m *SaltedSimpleStringMap) Reset()         { *m = SaltedSimpleStringMap{} }
 func (m *SaltedSimpleStringMap) String() string { return proto.CompactTextString(m) }
 func (*SaltedSimpleStringMap) ProtoMessage()    {}
 func (*SaltedSimpleStringMap) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{10}
+	return fileDescriptor_example_91be35c491169215, []int{10}
 }
 func (m *SaltedSimpleStringMap) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedSimpleStringMap.Unmarshal(m, b)
@@ -600,7 +600,7 @@ func (m *NestedMap) Reset()         { *m = NestedMap{} }
 func (m *NestedMap) String() string { return proto.CompactTextString(m) }
 func (*NestedMap) ProtoMessage()    {}
 func (*NestedMap) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{11}
+	return fileDescriptor_example_91be35c491169215, []int{11}
 }
 func (m *NestedMap) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_NestedMap.Unmarshal(m, b)
@@ -639,7 +639,7 @@ func (m *SaltedNestedMap) Reset()         { *m = SaltedNestedMap{} }
 func (m *SaltedNestedMap) String() string { return proto.CompactTextString(m) }
 func (*SaltedNestedMap) ProtoMessage()    {}
 func (*SaltedNestedMap) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{12}
+	return fileDescriptor_example_91be35c491169215, []int{12}
 }
 func (m *SaltedNestedMap) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedNestedMap.Unmarshal(m, b)
@@ -685,7 +685,7 @@ func (m *SimpleEntry) Reset()         { *m = SimpleEntry{} }
 func (m *SimpleEntry) String() string { return proto.CompactTextString(m) }
 func (*SimpleEntry) ProtoMessage()    {}
 func (*SimpleEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{13}
+	return fileDescriptor_example_91be35c491169215, []int{13}
 }
 func (m *SimpleEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SimpleEntry.Unmarshal(m, b)
@@ -731,7 +731,7 @@ func (m *SaltedSimpleEntry) Reset()         { *m = SaltedSimpleEntry{} }
 func (m *SaltedSimpleEntry) String() string { return proto.CompactTextString(m) }
 func (*SaltedSimpleEntry) ProtoMessage()    {}
 func (*SaltedSimpleEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{14}
+	return fileDescriptor_example_91be35c491169215, []int{14}
 }
 func (m *SaltedSimpleEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedSimpleEntry.Unmarshal(m, b)
@@ -776,7 +776,7 @@ func (m *SimpleEntries) Reset()         { *m = SimpleEntries{} }
 func (m *SimpleEntries) String() string { return proto.CompactTextString(m) }
 func (*SimpleEntries) ProtoMessage()    {}
 func (*SimpleEntries) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{15}
+	return fileDescriptor_example_91be35c491169215, []int{15}
 }
 func (m *SimpleEntries) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SimpleEntries.Unmarshal(m, b)
@@ -815,7 +815,7 @@ func (m *SaltedSimpleEntries) Reset()         { *m = SaltedSimpleEntries{} }
 func (m *SaltedSimpleEntries) String() string { return proto.CompactTextString(m) }
 func (*SaltedSimpleEntries) ProtoMessage()    {}
 func (*SaltedSimpleEntries) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{16}
+	return fileDescriptor_example_91be35c491169215, []int{16}
 }
 func (m *SaltedSimpleEntries) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedSimpleEntries.Unmarshal(m, b)
@@ -863,7 +863,7 @@ func (m *Entry) Reset()         { *m = Entry{} }
 func (m *Entry) String() string { return proto.CompactTextString(m) }
 func (*Entry) ProtoMessage()    {}
 func (*Entry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{17}
+	return fileDescriptor_example_91be35c491169215, []int{17}
 }
 func (m *Entry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Entry.Unmarshal(m, b)
@@ -925,7 +925,7 @@ func (m *SaltedEntry) Reset()         { *m = SaltedEntry{} }
 func (m *SaltedEntry) String() string { return proto.CompactTextString(m) }
 func (*SaltedEntry) ProtoMessage()    {}
 func (*SaltedEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{18}
+	return fileDescriptor_example_91be35c491169215, []int{18}
 }
 func (m *SaltedEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedEntry.Unmarshal(m, b)
@@ -984,7 +984,7 @@ func (m *Entries) Reset()         { *m = Entries{} }
 func (m *Entries) String() string { return proto.CompactTextString(m) }
 func (*Entries) ProtoMessage()    {}
 func (*Entries) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{19}
+	return fileDescriptor_example_91be35c491169215, []int{19}
 }
 func (m *Entries) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Entries.Unmarshal(m, b)
@@ -1023,7 +1023,7 @@ func (m *SaltedEntries) Reset()         { *m = SaltedEntries{} }
 func (m *SaltedEntries) String() string { return proto.CompactTextString(m) }
 func (*SaltedEntries) ProtoMessage()    {}
 func (*SaltedEntries) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{20}
+	return fileDescriptor_example_91be35c491169215, []int{20}
 }
 func (m *SaltedEntries) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedEntries.Unmarshal(m, b)
@@ -1069,7 +1069,7 @@ func (m *BytesKeyEntry) Reset()         { *m = BytesKeyEntry{} }
 func (m *BytesKeyEntry) String() string { return proto.CompactTextString(m) }
 func (*BytesKeyEntry) ProtoMessage()    {}
 func (*BytesKeyEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{21}
+	return fileDescriptor_example_91be35c491169215, []int{21}
 }
 func (m *BytesKeyEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BytesKeyEntry.Unmarshal(m, b)
@@ -1115,7 +1115,7 @@ func (m *SaltedBytesKeyEntry) Reset()         { *m = SaltedBytesKeyEntry{} }
 func (m *SaltedBytesKeyEntry) String() string { return proto.CompactTextString(m) }
 func (*SaltedBytesKeyEntry) ProtoMessage()    {}
 func (*SaltedBytesKeyEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{22}
+	return fileDescriptor_example_91be35c491169215, []int{22}
 }
 func (m *SaltedBytesKeyEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedBytesKeyEntry.Unmarshal(m, b)
@@ -1160,7 +1160,7 @@ func (m *BytesKeyEntries) Reset()         { *m = BytesKeyEntries{} }
 func (m *BytesKeyEntries) String() string { return proto.CompactTextString(m) }
 func (*BytesKeyEntries) ProtoMessage()    {}
 func (*BytesKeyEntries) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{23}
+	return fileDescriptor_example_91be35c491169215, []int{23}
 }
 func (m *BytesKeyEntries) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BytesKeyEntries.Unmarshal(m, b)
@@ -1199,7 +1199,7 @@ func (m *SaltedBytesKeyEntries) Reset()         { *m = SaltedBytesKeyEntries{} }
 func (m *SaltedBytesKeyEntries) String() string { return proto.CompactTextString(m) }
 func (*SaltedBytesKeyEntries) ProtoMessage()    {}
 func (*SaltedBytesKeyEntries) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{24}
+	return fileDescriptor_example_91be35c491169215, []int{24}
 }
 func (m *SaltedBytesKeyEntries) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedBytesKeyEntries.Unmarshal(m, b)
@@ -1245,7 +1245,7 @@ func (m *TwoLevelRepeatedDocument) Reset()         { *m = TwoLevelRepeatedDocume
 func (m *TwoLevelRepeatedDocument) String() string { return proto.CompactTextString(m) }
 func (*TwoLevelRepeatedDocument) ProtoMessage()    {}
 func (*TwoLevelRepeatedDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{25}
+	return fileDescriptor_example_91be35c491169215, []int{25}
 }
 func (m *TwoLevelRepeatedDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TwoLevelRepeatedDocument.Unmarshal(m, b)
@@ -1292,7 +1292,7 @@ func (m *SaltedTwoLevelRepeatedDocument) Reset()         { *m = SaltedTwoLevelRe
 func (m *SaltedTwoLevelRepeatedDocument) String() string { return proto.CompactTextString(m) }
 func (*SaltedTwoLevelRepeatedDocument) ProtoMessage()    {}
 func (*SaltedTwoLevelRepeatedDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{26}
+	return fileDescriptor_example_91be35c491169215, []int{26}
 }
 func (m *SaltedTwoLevelRepeatedDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedTwoLevelRepeatedDocument.Unmarshal(m, b)
@@ -1346,7 +1346,7 @@ func (m *SimpleRepeatedDocument) Reset()         { *m = SimpleRepeatedDocument{}
 func (m *SimpleRepeatedDocument) String() string { return proto.CompactTextString(m) }
 func (*SimpleRepeatedDocument) ProtoMessage()    {}
 func (*SimpleRepeatedDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{27}
+	return fileDescriptor_example_91be35c491169215, []int{27}
 }
 func (m *SimpleRepeatedDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SimpleRepeatedDocument.Unmarshal(m, b)
@@ -1401,7 +1401,7 @@ func (m *SaltedSimpleRepeatedDocument) Reset()         { *m = SaltedSimpleRepeat
 func (m *SaltedSimpleRepeatedDocument) String() string { return proto.CompactTextString(m) }
 func (*SaltedSimpleRepeatedDocument) ProtoMessage()    {}
 func (*SaltedSimpleRepeatedDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{28}
+	return fileDescriptor_example_91be35c491169215, []int{28}
 }
 func (m *SaltedSimpleRepeatedDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedSimpleRepeatedDocument.Unmarshal(m, b)
@@ -1463,7 +1463,7 @@ func (m *SimpleMapDocument) Reset()         { *m = SimpleMapDocument{} }
 func (m *SimpleMapDocument) String() string { return proto.CompactTextString(m) }
 func (*SimpleMapDocument) ProtoMessage()    {}
 func (*SimpleMapDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{29}
+	return fileDescriptor_example_91be35c491169215, []int{29}
 }
 func (m *SimpleMapDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SimpleMapDocument.Unmarshal(m, b)
@@ -1527,7 +1527,7 @@ func (m *SaltedSimpleMapDocument) Reset()         { *m = SaltedSimpleMapDocument
 func (m *SaltedSimpleMapDocument) String() string { return proto.CompactTextString(m) }
 func (*SaltedSimpleMapDocument) ProtoMessage()    {}
 func (*SaltedSimpleMapDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{30}
+	return fileDescriptor_example_91be35c491169215, []int{30}
 }
 func (m *SaltedSimpleMapDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedSimpleMapDocument.Unmarshal(m, b)
@@ -1601,7 +1601,7 @@ func (m *TwoLevelItem) Reset()         { *m = TwoLevelItem{} }
 func (m *TwoLevelItem) String() string { return proto.CompactTextString(m) }
 func (*TwoLevelItem) ProtoMessage()    {}
 func (*TwoLevelItem) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{31}
+	return fileDescriptor_example_91be35c491169215, []int{31}
 }
 func (m *TwoLevelItem) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TwoLevelItem.Unmarshal(m, b)
@@ -1647,7 +1647,7 @@ func (m *SaltedTwoLevelItem) Reset()         { *m = SaltedTwoLevelItem{} }
 func (m *SaltedTwoLevelItem) String() string { return proto.CompactTextString(m) }
 func (*SaltedTwoLevelItem) ProtoMessage()    {}
 func (*SaltedTwoLevelItem) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{32}
+	return fileDescriptor_example_91be35c491169215, []int{32}
 }
 func (m *SaltedTwoLevelItem) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedTwoLevelItem.Unmarshal(m, b)
@@ -1695,7 +1695,7 @@ func (m *NestedRepeatedDocument) Reset()         { *m = NestedRepeatedDocument{}
 func (m *NestedRepeatedDocument) String() string { return proto.CompactTextString(m) }
 func (*NestedRepeatedDocument) ProtoMessage()    {}
 func (*NestedRepeatedDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{33}
+	return fileDescriptor_example_91be35c491169215, []int{33}
 }
 func (m *NestedRepeatedDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_NestedRepeatedDocument.Unmarshal(m, b)
@@ -1758,7 +1758,7 @@ func (m *SaltedNestedRepeatedDocument) Reset()         { *m = SaltedNestedRepeat
 func (m *SaltedNestedRepeatedDocument) String() string { return proto.CompactTextString(m) }
 func (*SaltedNestedRepeatedDocument) ProtoMessage()    {}
 func (*SaltedNestedRepeatedDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{34}
+	return fileDescriptor_example_91be35c491169215, []int{34}
 }
 func (m *SaltedNestedRepeatedDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedNestedRepeatedDocument.Unmarshal(m, b)
@@ -1824,7 +1824,7 @@ func (m *InvalidHashedFieldDocument) Reset()         { *m = InvalidHashedFieldDo
 func (m *InvalidHashedFieldDocument) String() string { return proto.CompactTextString(m) }
 func (*InvalidHashedFieldDocument) ProtoMessage()    {}
 func (*InvalidHashedFieldDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{35}
+	return fileDescriptor_example_91be35c491169215, []int{35}
 }
 func (m *InvalidHashedFieldDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_InvalidHashedFieldDocument.Unmarshal(m, b)
@@ -1866,7 +1866,7 @@ func (m *OneofSample) Reset()         { *m = OneofSample{} }
 func (m *OneofSample) String() string { return proto.CompactTextString(m) }
 func (*OneofSample) ProtoMessage()    {}
 func (*OneofSample) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{36}
+	return fileDescriptor_example_91be35c491169215, []int{36}
 }
 func (m *OneofSample) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_OneofSample.Unmarshal(m, b)
@@ -1902,7 +1902,7 @@ type OneofSample_ValueB struct {
 }
 
 type OneofSample_ValueC struct {
-	ValueC int32 `protobuf:"varint,3,opt,name=valueC,proto3,oneof"`
+	ValueC string `protobuf:"bytes,3,opt,name=valueC,proto3,oneof"`
 }
 
 func (*OneofSample_ValueB) isOneofSample_OneofBlock() {}
@@ -1923,11 +1923,11 @@ func (m *OneofSample) GetValueB() int32 {
 	return 0
 }
 
-func (m *OneofSample) GetValueC() int32 {
+func (m *OneofSample) GetValueC() string {
 	if x, ok := m.GetOneofBlock().(*OneofSample_ValueC); ok {
 		return x.ValueC
 	}
-	return 0
+	return ""
 }
 
 // XXX_OneofFuncs is for the internal use of the proto package.
@@ -1946,8 +1946,8 @@ func _OneofSample_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
 		b.EncodeVarint(2<<3 | proto.WireVarint)
 		b.EncodeVarint(uint64(x.ValueB))
 	case *OneofSample_ValueC:
-		b.EncodeVarint(3<<3 | proto.WireVarint)
-		b.EncodeVarint(uint64(x.ValueC))
+		b.EncodeVarint(3<<3 | proto.WireBytes)
+		b.EncodeStringBytes(x.ValueC)
 	case nil:
 	default:
 		return fmt.Errorf("OneofSample.OneofBlock has unexpected type %T", x)
@@ -1966,11 +1966,11 @@ func _OneofSample_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Bu
 		m.OneofBlock = &OneofSample_ValueB{int32(x)}
 		return true, err
 	case 3: // oneofBlock.valueC
-		if wire != proto.WireVarint {
+		if wire != proto.WireBytes {
 			return true, proto.ErrInternalBadWireType
 		}
-		x, err := b.DecodeVarint()
-		m.OneofBlock = &OneofSample_ValueC{int32(x)}
+		x, err := b.DecodeStringBytes()
+		m.OneofBlock = &OneofSample_ValueC{x}
 		return true, err
 	default:
 		return false, nil
@@ -1986,7 +1986,8 @@ func _OneofSample_OneofSizer(msg proto.Message) (n int) {
 		n += proto.SizeVarint(uint64(x.ValueB))
 	case *OneofSample_ValueC:
 		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(x.ValueC))
+		n += proto.SizeVarint(uint64(len(x.ValueC)))
+		n += len(x.ValueC)
 	case nil:
 	default:
 		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
@@ -2006,7 +2007,7 @@ func (m *OneofSampleSalts) Reset()         { *m = OneofSampleSalts{} }
 func (m *OneofSampleSalts) String() string { return proto.CompactTextString(m) }
 func (*OneofSampleSalts) ProtoMessage()    {}
 func (*OneofSampleSalts) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{37}
+	return fileDescriptor_example_91be35c491169215, []int{37}
 }
 func (m *OneofSampleSalts) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_OneofSampleSalts.Unmarshal(m, b)
@@ -2065,7 +2066,7 @@ func (m *LongDocument) Reset()         { *m = LongDocument{} }
 func (m *LongDocument) String() string { return proto.CompactTextString(m) }
 func (*LongDocument) ProtoMessage()    {}
 func (*LongDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{38}
+	return fileDescriptor_example_91be35c491169215, []int{38}
 }
 func (m *LongDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_LongDocument.Unmarshal(m, b)
@@ -2215,7 +2216,7 @@ func (m *SaltedLongDocument) Reset()         { *m = SaltedLongDocument{} }
 func (m *SaltedLongDocument) String() string { return proto.CompactTextString(m) }
 func (*SaltedLongDocument) ProtoMessage()    {}
 func (*SaltedLongDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{39}
+	return fileDescriptor_example_91be35c491169215, []int{39}
 }
 func (m *SaltedLongDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedLongDocument.Unmarshal(m, b)
@@ -2359,7 +2360,7 @@ func (m *SaltedExampleDocument) Reset()         { *m = SaltedExampleDocument{} }
 func (m *SaltedExampleDocument) String() string { return proto.CompactTextString(m) }
 func (*SaltedExampleDocument) ProtoMessage()    {}
 func (*SaltedExampleDocument) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{40}
+	return fileDescriptor_example_91be35c491169215, []int{40}
 }
 func (m *SaltedExampleDocument) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedExampleDocument.Unmarshal(m, b)
@@ -2462,7 +2463,7 @@ func (m *Integers) Reset()         { *m = Integers{} }
 func (m *Integers) String() string { return proto.CompactTextString(m) }
 func (*Integers) ProtoMessage()    {}
 func (*Integers) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{41}
+	return fileDescriptor_example_91be35c491169215, []int{41}
 }
 func (m *Integers) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Integers.Unmarshal(m, b)
@@ -2572,7 +2573,7 @@ func (m *SaltedIntegers) Reset()         { *m = SaltedIntegers{} }
 func (m *SaltedIntegers) String() string { return proto.CompactTextString(m) }
 func (*SaltedIntegers) ProtoMessage()    {}
 func (*SaltedIntegers) Descriptor() ([]byte, []int) {
-	return fileDescriptor_example_cc19f8d5aacefeeb, []int{42}
+	return fileDescriptor_example_91be35c491169215, []int{42}
 }
 func (m *SaltedIntegers) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SaltedIntegers.Unmarshal(m, b)
@@ -2720,11 +2721,11 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("examples/documents/example.proto", fileDescriptor_example_cc19f8d5aacefeeb)
+	proto.RegisterFile("examples/documents/example.proto", fileDescriptor_example_91be35c491169215)
 }
 
-var fileDescriptor_example_cc19f8d5aacefeeb = []byte{
-	// 1678 bytes of a gzipped FileDescriptorProto
+var fileDescriptor_example_91be35c491169215 = []byte{
+	// 1680 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x59, 0x4b, 0x6f, 0xdb, 0xc6,
 	0x16, 0x0e, 0x25, 0xcb, 0xb6, 0x8e, 0x46, 0xb6, 0xcc, 0x24, 0x0e, 0xa1, 0xe4, 0x26, 0xba, 0x44,
 	0x2e, 0x20, 0xf8, 0x26, 0xf2, 0x2b, 0x4e, 0xec, 0x76, 0x91, 0x5a, 0x0f, 0xc7, 0x76, 0x1e, 0x48,
@@ -2804,30 +2805,30 @@ var fileDescriptor_example_cc19f8d5aacefeeb = []byte{
 	0x57, 0xf0, 0x1b, 0x42, 0xc1, 0x6b, 0xb1, 0x37, 0x47, 0x6c, 0x80, 0x5b, 0x90, 0xdf, 0xb3, 0x5f,
 	0x5a, 0x9d, 0x76, 0x93, 0x0e, 0x64, 0xc8, 0x84, 0x83, 0x47, 0x77, 0x39, 0xfc, 0x84, 0xd0, 0x8a,
 	0x69, 0x36, 0xc3, 0x09, 0xda, 0x83, 0x16, 0x64, 0x1c, 0x1b, 0x3b, 0xcf, 0x0e, 0xc8, 0x38, 0x2c,
-	0xc2, 0x44, 0x8a, 0x33, 0x61, 0x48, 0x4c, 0xa4, 0x76, 0xcf, 0x71, 0x2e, 0x0c, 0x81, 0x0b, 0x71,
-	0xa5, 0x52, 0x46, 0x00, 0x44, 0x75, 0xb9, 0xe3, 0x1c, 0xbf, 0x30, 0xf7, 0x21, 0x27, 0x18, 0xa2,
-	0x93, 0x17, 0x15, 0xef, 0x57, 0xc5, 0x37, 0x59, 0xff, 0x2e, 0xe8, 0xfa, 0x23, 0x01, 0xe8, 0x81,
-	0x63, 0xb7, 0x86, 0x12, 0xb8, 0x62, 0xe4, 0x84, 0x6e, 0x75, 0x45, 0x98, 0xd2, 0x69, 0x8a, 0x29,
-	0x5d, 0x42, 0x9a, 0xd2, 0x31, 0x7c, 0x5d, 0x9a, 0xea, 0xad, 0x73, 0xfc, 0x96, 0xd4, 0x0d, 0xdf,
-	0xe2, 0xf8, 0x06, 0xc9, 0x17, 0xc3, 0x37, 0x38, 0x7e, 0x9b, 0x1c, 0x35, 0x0c, 0xbf, 0xcd, 0xf1,
-	0x3b, 0x64, 0x5a, 0xc7, 0xf0, 0x3b, 0x1c, 0xdf, 0x24, 0x63, 0x39, 0x86, 0x6f, 0x72, 0x7c, 0x8b,
-	0xcc, 0xdf, 0x18, 0xbe, 0x25, 0x10, 0x07, 0x02, 0x2e, 0x16, 0x6c, 0x46, 0xc0, 0xc5, 0x3b, 0x18,
-	0x89, 0xdd, 0x3c, 0xc7, 0xab, 0x46, 0x56, 0xc0, 0xab, 0x1c, 0xaf, 0x19, 0x73, 0x02, 0x5e, 0x33,
-	0xdf, 0x27, 0xd8, 0xc1, 0x72, 0x0a, 0xfd, 0x48, 0x41, 0x3f, 0x52, 0xd0, 0x8f, 0x14, 0xf4, 0x23,
-	0x05, 0xfd, 0x48, 0x41, 0x3f, 0x52, 0xd0, 0x8f, 0x14, 0xf4, 0x23, 0x05, 0xfd, 0x48, 0x41, 0x3f,
-	0x52, 0xd0, 0x8f, 0x14, 0xf4, 0x23, 0x05, 0xfd, 0x48, 0x41, 0x3f, 0x52, 0xd0, 0x8f, 0x38, 0xfd,
-	0x3f, 0x24, 0x58, 0xcb, 0x7d, 0xfa, 0xf8, 0x7a, 0xfc, 0xa6, 0x6c, 0x55, 0x62, 0x3a, 0x3a, 0xbe,
-	0x46, 0xff, 0xce, 0xf8, 0x7a, 0x49, 0x39, 0xbe, 0x1e, 0x9e, 0x5b, 0xe7, 0x61, 0x96, 0x40, 0x0f,
-	0xad, 0x5e, 0x40, 0x36, 0x7f, 0xa6, 0x1f, 0x9f, 0x6c, 0xec, 0x4c, 0x19, 0x0f, 0xa7, 0xcc, 0x7f,
-	0x6a, 0x30, 0xbb, 0x67, 0x7b, 0xb8, 0x85, 0xfb, 0xae, 0xf2, 0x58, 0x93, 0xe9, 0x49, 0xc6, 0xf6,
-	0xac, 0x5a, 0x31, 0x1b, 0x93, 0x30, 0x9f, 0x9e, 0xa9, 0x98, 0x84, 0xf9, 0xc4, 0x2c, 0xb0, 0x84,
-	0x71, 0x7c, 0x87, 0x50, 0xa1, 0x07, 0xf8, 0x0e, 0xc7, 0xef, 0x91, 0xb0, 0x67, 0x02, 0xfc, 0x1e,
-	0xc7, 0x77, 0x49, 0x21, 0x4e, 0x07, 0xf8, 0x2e, 0xc7, 0xf7, 0x48, 0x21, 0xce, 0x07, 0xf8, 0x1e,
-	0xc7, 0xf7, 0x09, 0x37, 0xb9, 0x00, 0xdf, 0x37, 0xbf, 0x48, 0xc0, 0x1c, 0x2d, 0x14, 0x05, 0x05,
-	0x93, 0xb5, 0xed, 0xf1, 0x35, 0x3b, 0xa5, 0xa8, 0x59, 0x71, 0x2f, 0x46, 0x29, 0x40, 0x0a, 0x0a,
-	0x90, 0x82, 0x02, 0xa4, 0xa0, 0x00, 0x29, 0x28, 0x60, 0xf8, 0xfe, 0x92, 0x09, 0x53, 0x35, 0xfb,
-	0xa4, 0xab, 0x23, 0x98, 0xf5, 0xeb, 0xa3, 0xe1, 0xd8, 0x38, 0x77, 0x8e, 0x3f, 0x79, 0xaf, 0x9c,
-	0x9c, 0x56, 0xbe, 0x01, 0xd9, 0x63, 0xa7, 0x1b, 0xde, 0xb1, 0x65, 0x14, 0xec, 0xab, 0xc7, 0x7d,
-	0xc7, 0x73, 0x1e, 0x6b, 0x9f, 0x66, 0xf8, 0x52, 0xef, 0xe8, 0x68, 0x9a, 0xfc, 0xc3, 0xb0, 0xfe,
-	0x57, 0x00, 0x00, 0x00, 0xff, 0xff, 0xb5, 0x45, 0xc5, 0x79, 0xa7, 0x1a, 0x00, 0x00,
+	0xc2, 0x44, 0x8a, 0x33, 0x61, 0x48, 0x4c, 0xa4, 0x76, 0xcf, 0x71, 0x2e, 0x0c, 0x81, 0x0b, 0xad,
+	0x98, 0xe6, 0x2b, 0x95, 0x32, 0x02, 0x20, 0xaa, 0xcb, 0x1d, 0xe7, 0xf8, 0x85, 0xb9, 0x0f, 0x39,
+	0xc1, 0x10, 0x9d, 0xbc, 0xa8, 0x78, 0xbf, 0x2a, 0xbe, 0xc9, 0xfa, 0x77, 0x41, 0xd7, 0x1f, 0x09,
+	0x40, 0x0f, 0x1c, 0xbb, 0x35, 0x94, 0xc0, 0x15, 0x23, 0x27, 0x74, 0xab, 0x2b, 0xc2, 0x94, 0x4e,
+	0x53, 0x4c, 0xe9, 0x12, 0xd2, 0x94, 0x8e, 0xe1, 0xeb, 0xd2, 0x54, 0x6f, 0x9d, 0xe3, 0xb7, 0xa4,
+	0x6e, 0xf8, 0x16, 0xc7, 0x37, 0x48, 0xbe, 0x18, 0xbe, 0xc1, 0xf1, 0xdb, 0xe4, 0xa8, 0x61, 0xf8,
+	0x6d, 0x8e, 0xdf, 0x21, 0xd3, 0x3a, 0x86, 0xdf, 0xe1, 0xf8, 0x26, 0x19, 0xcb, 0x31, 0x7c, 0x93,
+	0xe3, 0x5b, 0x64, 0xfe, 0xc6, 0xf0, 0x2d, 0x81, 0x38, 0x10, 0x70, 0xb1, 0x60, 0x33, 0x02, 0x2e,
+	0xde, 0xc1, 0x48, 0xec, 0xe6, 0x39, 0x5e, 0x35, 0xb2, 0x02, 0x5e, 0xe5, 0x78, 0xcd, 0x98, 0x13,
+	0xf0, 0x9a, 0xf9, 0x3e, 0xc1, 0x0e, 0x96, 0x53, 0xe8, 0x47, 0x0a, 0xfa, 0x91, 0x82, 0x7e, 0xa4,
+	0xa0, 0x1f, 0x29, 0xe8, 0x47, 0x0a, 0xfa, 0x91, 0x82, 0x7e, 0xa4, 0xa0, 0x1f, 0x29, 0xe8, 0x47,
+	0x0a, 0xfa, 0x91, 0x82, 0x7e, 0xa4, 0xa0, 0x1f, 0x29, 0xe8, 0x47, 0x0a, 0xfa, 0x91, 0x82, 0x7e,
+	0xc4, 0xe9, 0xff, 0x21, 0xc1, 0x5a, 0xee, 0xd3, 0xc7, 0xd7, 0xe3, 0x37, 0x65, 0xab, 0x12, 0xd3,
+	0xd1, 0xf1, 0x35, 0xfa, 0x77, 0xc6, 0xd7, 0x4b, 0xca, 0xf1, 0xf5, 0xf0, 0xdc, 0x3a, 0x0f, 0xb3,
+	0x04, 0x7a, 0x68, 0xf5, 0x02, 0xb2, 0xf9, 0x33, 0xfd, 0xf8, 0x64, 0x63, 0x67, 0xca, 0x78, 0x38,
+	0x65, 0xfe, 0x53, 0x83, 0xd9, 0x3d, 0xdb, 0xc3, 0x2d, 0xdc, 0x77, 0x95, 0xc7, 0x9a, 0x4c, 0x4f,
+	0x32, 0xb6, 0x67, 0xd5, 0x8a, 0xd9, 0x98, 0x84, 0xf9, 0xf4, 0x4c, 0xc5, 0x24, 0xcc, 0x27, 0x66,
+	0x81, 0x25, 0x8c, 0xe3, 0x3b, 0x84, 0x0a, 0x3d, 0xc0, 0x77, 0x38, 0x7e, 0x8f, 0x84, 0x3d, 0x13,
+	0xe0, 0xf7, 0x38, 0xbe, 0x4b, 0x0a, 0x71, 0x3a, 0xc0, 0x77, 0x39, 0xbe, 0x47, 0x0a, 0x71, 0x3e,
+	0xc0, 0xf7, 0x38, 0xbe, 0x4f, 0xb8, 0xc9, 0x05, 0xf8, 0xbe, 0xf9, 0x45, 0x02, 0xe6, 0x68, 0xa1,
+	0x28, 0x28, 0x98, 0xac, 0x6d, 0x8f, 0xaf, 0xd9, 0x29, 0x45, 0xcd, 0x8a, 0x7b, 0x31, 0x4a, 0x01,
+	0x52, 0x50, 0x80, 0x14, 0x14, 0x20, 0x05, 0x05, 0x48, 0x41, 0x01, 0xc3, 0xf7, 0x97, 0x4c, 0x98,
+	0xaa, 0xd9, 0x27, 0x5d, 0x1d, 0xc1, 0xac, 0x5f, 0x1f, 0x0d, 0xc7, 0xc6, 0xb9, 0x73, 0xfc, 0xc9,
+	0x7b, 0xe5, 0xe4, 0xb4, 0xf2, 0x0d, 0xc8, 0x1e, 0x3b, 0xdd, 0xf0, 0x8e, 0x2d, 0xa3, 0x60, 0x5f,
+	0x3d, 0xee, 0x3b, 0x9e, 0xf3, 0x58, 0xfb, 0x34, 0xc3, 0x97, 0x7a, 0x47, 0x47, 0xd3, 0xe4, 0x1f,
+	0x86, 0xf5, 0xbf, 0x02, 0x00, 0x00, 0xff, 0xff, 0xde, 0x7d, 0x16, 0xb4, 0xa7, 0x1a, 0x00, 0x00,
 }
