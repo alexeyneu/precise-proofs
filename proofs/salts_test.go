@@ -28,7 +28,7 @@ func TestFillSalts(t *testing.T) {
 
 	//Document with oneof fieldset
 	exampleOneofDoc := &documentspb.ExampleOneofSampleDocument
-	exampleOneofSalts := &documentspb.ExampleOneofSampleSaltsDocument
+	exampleOneofSalts := &documentspb.OneofSampleSalts{}
 	err = FillSalts(exampleOneofDoc, exampleOneofSalts)
 	assert.Nil(t, err, "Fill salts should not fail")
 	assert.NotNil(t, exampleOneofSalts.ValueA)

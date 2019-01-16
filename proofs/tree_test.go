@@ -1316,6 +1316,38 @@ func TestCreateProof_standard_customEncoder(t *testing.T) {
 	assert.EqualError(t, err, "Hash does not match")
 }
 
+func TestCreateOneofProof(t *testing.T) {
+	doctree := NewDocumentTree(TreeOptions{Hash: sha256Hash})
+	err := doctree.AddLeavesFromDocument(&documentspb.ExampleOneofSampleDocument, &documentspb.ExampleOneofSampleSaltsDocument)
+	assert.Nil(t, err)
+	err = doctree.Generate()
+
+	_, err = doctree.CreateProof("InexistentField")
+	assert.EqualError(t, err, "No such field: InexistentField in obj")
+
+	proof, err := doctree.CreateProof("valueB")
+	assert.Nil(t, err)
+	assert.Equal(t, ReadableName("valueB"), proof.Property)
+	assert.Equal(t, strconv.Itoa(int(documentspb.ExampleOneofSampleDocument.OneofBlock.(*documentspb.OneofSample_ValueB).ValueB)), proof.Value)
+	assert.Equal(t, documentspb.ExampleOneofSampleSaltsDocument.OneofBlock, proof.Salt)
+
+	fieldHash, err := CalculateHashForProofField(&proof, sha256Hash)
+	rootHash := []byte{0x7e ,0xd5 ,0x5 ,0x7b ,0xbf ,0x9a ,0xf4 ,0x7d ,0x2 ,0x3e ,0xd4 ,0x5d ,0xaa ,0xae ,0xd9 ,0xad ,0xfb ,0x5d ,0xbe ,0x43 ,0x72 ,0x3e ,0x4c ,0x4 ,0x8d ,0x88 ,0xb6 ,0x72 ,0x47 ,0xb8 ,0x84 ,0x14}
+	assert.Equal(t, rootHash, doctree.rootHash)
+	valid, err := ValidateProofHashes(fieldHash, proof.Hashes, rootHash, doctree.hash)
+	assert.True(t, valid)
+
+	valid, err = doctree.ValidateProof(&proof)
+	assert.True(t, valid)
+	assert.Nil(t, err)
+
+	falseProof, err := doctree.CreateProof("valueB")
+	falseProof.Value = "Invalid"
+	valid, err = doctree.ValidateProof(&falseProof)
+	assert.False(t, valid)
+	assert.EqualError(t, err, "Hash does not match")
+}
+
 func TestCreateProof_sorted(t *testing.T) {
 	doctree := NewDocumentTree(TreeOptions{EnableHashSorting: true, Hash: sha256Hash})
 	err := doctree.AddLeavesFromDocument(&documentspb.FilledExampleDocument, &documentspb.ExampleDocumentSalts)
