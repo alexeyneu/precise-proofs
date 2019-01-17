@@ -1,0 +1,8 @@
+precise-proofs reference
+
+...
+
+10. oneof field set
+in golang it's represented by an interface variable
+It could been set to instance of the one of types each named after a field. These are structures and each contains one field same as one in field set (name may vary slightly) .
+So in proof operations field names are used, where name of field set is used with salt related ones. 
