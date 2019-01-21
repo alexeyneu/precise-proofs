@@ -12,7 +12,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/centrifuge/precise-proofs/proofs/proto"
+	"gopkg.in/alexeyneu/precise-proofs.v3/proofs/proto"
 )
 
 // Property uniquely identifies a LeafNode
@@ -124,10 +124,10 @@ func (n Property) MapElemProp(k interface{}, keyLength uint64) (Property, error)
 }
 
 // LengthProp returns a child Property representing the length of a repeated field
-func (n Property) LengthProp() Property {
+func (n Property) LengthProp(saltsLengthSuffix string) Property {
 	return Property{
 		Parent:     &n,
-		Text:       "length",
+		Text:       saltsLengthSuffix,
 		NameFormat: SubFieldFormat,
 	}
 }
